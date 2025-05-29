@@ -73,7 +73,7 @@ const ContactInfo = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Phone</div>
-                  <div className="text-gray-300">+1 (555) 123-4567</div>
+                  <div className="text-gray-300">+357 97521528</div>
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ const ContactInfo = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Email</div>
-                  <div className="text-gray-300">sales@cloudtech-solutions.com</div>
+                  <div className="text-gray-300">sales@cloudtechcy.com</div>
                 </div>
               </div>
 
@@ -93,7 +93,7 @@ const ContactInfo = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Address</div>
-                  <div className="text-gray-300">123 Cloud Street, Tech City, TC 12345</div>
+                  <div className="text-gray-300">Limassol, Cyprus</div>
                 </div>
               </div>
             </div>

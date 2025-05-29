@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const CloudStats = () => {
   const stats = [
-    { number: "50K+", label: "Active Clients", suffix: "" },
-    { number: "99.9", label: "Uptime SLA", suffix: "%" },
-    { number: "150+", label: "Global Locations", suffix: "" },
+    { number: "5K+", label: "Active Clients", suffix: "" },
+    { number: "98.7", label: "Uptime SLA", suffix: "%" },
+    { number: "50+", label: "Global Locations", suffix: "" },
     { number: "24/7", label: "Expert Support", suffix: "" }
   ];
 

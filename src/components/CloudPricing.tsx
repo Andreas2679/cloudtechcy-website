@@ -7,14 +7,13 @@ const CloudPricing = () => {
   const plans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "€250",
       period: "/month",
       description: "Perfect for small businesses and startups",
       features: [
-        "Basic VPN (5 connections)",
+        "VPN (5 connections)",
         "1 Virtual Machine",
-        "VoIP (10 users)",
-        "50GB Cloud Storage",
+        "1TB Cloud Storage",
         "Email Support",
         "99.5% Uptime SLA"
       ],
@@ -22,36 +21,32 @@ const CloudPricing = () => {
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "€650",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Advanced VPN (25 connections)",
+        "VPN (25 connections)",
         "5 Virtual Machines",
-        "VoIP (50 users)",
-        "500GB Cloud Storage",
+        "VoIP (10 users)",
+        "5TB Cloud Storage",
         "Priority Support",
-        "99.9% Uptime SLA",
-        "Load Balancing",
-        "Advanced Security"
+        "99.9% Uptime SLA"
       ],
       highlighted: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "€1,250",
       period: "/month",
       description: "For large organizations with complex needs",
       features: [
-        "Enterprise VPN (Unlimited)",
-        "Unlimited Virtual Machines",
-        "VoIP (Unlimited users)",
-        "5TB Cloud Storage",
-        "24/7 Dedicated Support",
+        "VPN (On Router and 150+ connections)",
+        "25 Virtual Machines",
+        "VoIP (50 users)",
+        "10TB Cloud Storage",
+        "24/7 Support",
         "99.99% Uptime SLA",
-        "Custom Integrations",
-        "Compliance Support",
-        "Dedicated Account Manager"
+        "Custom Integrations"
       ],
       highlighted: false
     }
