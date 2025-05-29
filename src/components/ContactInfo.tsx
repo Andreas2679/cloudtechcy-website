@@ -1,83 +1,186 @@
 
-import React from 'react';
-import { Mail, Linkedin, Phone } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { motion } from 'framer-motion';
 
 const ContactInfo = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Handle form submission here
+    alert('Thank you for your message! We will get back to you soon.');
+    setFormData({ name: '', email: '', company: '', message: '' });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
-    <section id="contact-info" className="bg-gradient-to-b from-white to-black text-white relative py-[15px] md:py-[25px]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 md:mb-16">
-          <div className="inline-block mb-3 px-3 py-1 bg-white text-black rounded-full text-sm font-medium">
-            Get In Touch
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-            Contact Us Today
-          </h2>
-          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Have questions about our AI-powered sensor solutions? Reach out to our team and let's discuss how we can help bring your ideas to life.
-          </p>
+    <section id="contact" className="py-20 bg-gray-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-6"
+          >
+            Ready to Get Started?
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+          >
+            Contact our cloud experts today and discover how we can transform your business operations.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Felix's Contact Info */}
-          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700">
-            <div className="flex flex-col items-center text-center">
-              <img 
-                src="/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
-                alt="Felix von Heland"
-                className="w-32 h-32 rounded-full mb-4 object-cover filter grayscale"
-              />
-              <h3 className="text-xl font-bold text-gray-900">Felix von Heland</h3>
-              <p className="text-gray-600 mb-4">CEO and Founder</p>
-              <div className="flex flex-col space-y-3">
-                <a href="mailto:felix@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
-                  <Mail className="w-5 h-5 mr-2" />
-                  felix@wrlds.com
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/felixvonheland/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-700 hover:text-blue-600"
-                >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
-                </a>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                Have questions about our cloud solutions? Our team of experts is here to help you 
+                find the perfect solution for your business needs.
+              </p>
             </div>
-          </div>
 
-          {/* Love's Contact Info */}
-          <div className="bg-white rounded-xl shadow-xl p-6 md:p-8 border border-gray-700">
-            <div className="flex flex-col items-center text-center">
-              <img 
-                src="/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
-                alt="Love Anderberg"
-                className="w-32 h-32 rounded-full mb-4 object-cover filter grayscale"
-              />
-              <h3 className="text-xl font-bold text-gray-900">Love Anderberg</h3>
-              <p className="text-gray-600 mb-4">COO</p>
-              <div className="flex flex-col space-y-3">
-                <a href="mailto:love@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
-                  <Mail className="w-5 h-5 mr-2" />
-                  love@wrlds.com
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/love-anderberg-67549a174/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-700 hover:text-blue-600"
-                >
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
-                </a>
-                <a href="tel:+46760149508" className="flex items-center text-gray-700 hover:text-blue-600">
-                  <Phone className="w-5 h-5 mr-2" />
-                  076-014 95 08
-                </a>
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="font-semibold">Phone</div>
+                  <div className="text-gray-300">+1 (555) 123-4567</div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="font-semibold">Email</div>
+                  <div className="text-gray-300">sales@cloudtech-solutions.com</div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="font-semibold">Address</div>
+                  <div className="text-gray-300">123 Cloud Street, Tech City, TC 12345</div>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gray-800 rounded-xl p-8"
+          >
+            <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Full Name *
+                  </label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-gray-700 border-gray-600 text-white"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email Address *
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-gray-700 border-gray-600 text-white"
+                    placeholder="your.email@company.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium mb-2">
+                  Company Name
+                </label>
+                <Input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="bg-gray-700 border-gray-600 text-white"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your cloud infrastructure needs..."
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 py-3 text-lg font-semibold group"
+              >
+                Send Message
+                <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </form>
+          </motion.div>
         </div>
       </div>
     </section>
