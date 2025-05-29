@@ -25,14 +25,14 @@ const CloudTestimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
             What Our Clients Say
           </motion.h2>
@@ -40,7 +40,7 @@ const CloudTestimonials = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-slate-300 max-w-2xl mx-auto"
           >
             Real feedback from businesses who have transformed their operations with our cloud solutions.
           </motion.p>
@@ -53,9 +53,9 @@ const CloudTestimonials = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-xl p-8 shadow-lg relative"
+              className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 shadow-lg relative border border-slate-600/50"
             >
-              <Quote className="w-8 h-8 text-blue-500 mb-4" />
+              <Quote className="w-8 h-8 text-blue-400 mb-4" />
               
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -63,11 +63,11 @@ const CloudTestimonials = () => {
                 ))}
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
+              <p className="text-slate-300 mb-6 leading-relaxed">"{testimonial.content}"</p>
               
               <div>
-                <div className="font-bold text-gray-900">{testimonial.name}</div>
-                <div className="text-gray-600">{testimonial.role}</div>
+                <div className="font-bold text-white">{testimonial.name}</div>
+                <div className="text-slate-400">{testimonial.role}</div>
               </div>
             </motion.div>
           ))}

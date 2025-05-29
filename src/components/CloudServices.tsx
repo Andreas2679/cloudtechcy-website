@@ -43,14 +43,14 @@ const CloudServices = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section className="py-20 bg-slate-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
             Our Cloud Solutions
           </motion.h2>
@@ -58,7 +58,7 @@ const CloudServices = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
             Comprehensive cloud services designed to accelerate your digital transformation 
             and enhance your business operations.
@@ -72,18 +72,18 @@ const CloudServices = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
+              className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 border border-slate-600/50"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                <service.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="w-16 h-16 bg-blue-600/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors border border-blue-500/30">
+                <service.icon className="w-8 h-8 text-blue-400 group-hover:text-white transition-colors" />
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+              <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
               
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                  <li key={featureIndex} className="flex items-center text-sm text-slate-400">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                     {feature}
                   </li>

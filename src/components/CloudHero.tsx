@@ -40,22 +40,38 @@ const CloudHero = () => {
 
   return (
     <motion.div 
-      className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden"
+      className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden min-h-screen"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      {/* Background Pattern */}
+      {/* Cloud Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <svg className="absolute top-20 left-10 w-32 h-20 text-blue-300 animate-float" viewBox="0 0 100 60" fill="currentColor">
+          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
+        </svg>
+        <svg className="absolute top-40 right-20 w-40 h-24 text-slate-400 animate-float animation-delay-300" viewBox="0 0 100 60" fill="currentColor">
+          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
+        </svg>
+        <svg className="absolute bottom-40 left-1/4 w-28 h-16 text-blue-200 animate-float animation-delay-500" viewBox="0 0 100 60" fill="currentColor">
+          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
+        </svg>
+        <svg className="absolute top-60 right-1/3 w-36 h-22 text-slate-300 animate-float animation-delay-200" viewBox="0 0 100 60" fill="currentColor">
+          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
+        </svg>
+      </div>
+
+      {/* Animated Background Overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-200"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-400"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-slate-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-200"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-400"></div>
       </div>
 
       <div className="relative container mx-auto px-4 py-20 lg:py-32">
         <div className="text-center max-w-4xl mx-auto">
           <motion.div variants={itemVariants} className="mb-6">
-            <span className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-blue-200 text-sm font-medium backdrop-blur-sm">
+            <span className="inline-flex items-center px-4 py-2 bg-blue-600/30 rounded-full text-blue-200 text-sm font-medium backdrop-blur-sm border border-blue-400/20">
               <Cloud className="w-4 h-4 mr-2" />
               Next-Generation Cloud Solutions
             </span>
@@ -73,7 +89,7 @@ const CloudHero = () => {
 
           <motion.p 
             variants={itemVariants}
-            className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed"
+            className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed"
           >
             Enterprise-grade VPN, Virtual Computing, VoIP, and Server Hosting solutions 
             designed for modern businesses seeking reliability, security, and scalability.
@@ -86,7 +102,7 @@ const CloudHero = () => {
             <Button 
               onClick={scrollToServices}
               size="lg" 
-              className="bg-white text-blue-900 hover:bg-blue-50 font-semibold px-8 py-4 text-lg group"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg group border border-blue-500"
             >
               Explore Solutions
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -96,7 +112,7 @@ const CloudHero = () => {
               onClick={scrollToContact}
               variant="outline" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-4 text-lg"
+              className="border-slate-400 text-slate-200 hover:bg-slate-700 hover:text-white font-semibold px-8 py-4 text-lg"
             >
               Get Started Today
             </Button>
@@ -107,15 +123,15 @@ const CloudHero = () => {
             variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto"
           >
-            <div className="flex items-center justify-center space-x-3 text-blue-200">
+            <div className="flex items-center justify-center space-x-3 text-slate-300">
               <Shield className="w-6 h-6 text-green-400" />
               <span className="font-medium">99.9% Uptime SLA</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-blue-200">
+            <div className="flex items-center justify-center space-x-3 text-slate-300">
               <Zap className="w-6 h-6 text-yellow-400" />
               <span className="font-medium">Lightning Fast Performance</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-blue-200">
+            <div className="flex items-center justify-center space-x-3 text-slate-300">
               <Cloud className="w-6 h-6 text-blue-400" />
               <span className="font-medium">Global Infrastructure</span>
             </div>

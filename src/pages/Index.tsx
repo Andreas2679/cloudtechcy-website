@@ -17,11 +17,17 @@ const Index = () => {
         keywords={['cloud solutions', 'VPN services', 'virtual computing', 'VoIP', 'server hosting', 'cloud infrastructure', 'enterprise cloud']}
       />
       <CloudHero />
-      <CloudServices />
-      <CloudFeatures />
+      <div id="services">
+        <CloudServices />
+      </div>
+      <div id="features">
+        <CloudFeatures />
+      </div>
       <CloudStats />
       <CloudTestimonials />
-      <CloudPricing />
+      <div id="pricing">
+        <CloudPricing />
+      </div>
     </PageLayout>
   );
 };
