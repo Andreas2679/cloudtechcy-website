@@ -1,26 +1,13 @@
 
-import { ArrowRight, Cloud, Shield, Zap } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, Play, Shield, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const CloudHero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.6 }
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -31,114 +18,150 @@ const CloudHero = () => {
     }
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <motion.div 
-      className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden min-h-screen"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      {/* Cloud Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <svg className="absolute top-20 left-10 w-32 h-20 text-blue-300 animate-float" viewBox="0 0 100 60" fill="currentColor">
-          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
-        </svg>
-        <svg className="absolute top-40 right-20 w-40 h-24 text-slate-400 animate-float animation-delay-300" viewBox="0 0 100 60" fill="currentColor">
-          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
-        </svg>
-        <svg className="absolute bottom-40 left-1/4 w-28 h-16 text-blue-200 animate-float animation-delay-500" viewBox="0 0 100 60" fill="currentColor">
-          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
-        </svg>
-        <svg className="absolute top-60 right-1/3 w-36 h-22 text-slate-300 animate-float animation-delay-200" viewBox="0 0 100 60" fill="currentColor">
-          <path d="M25 40c-5.5 0-10-4.5-10-10s4.5-10 10-10c1.4-5.5 6.5-10 12.5-10s11.1 4.5 12.5 10c5.5 0 10 4.5 10 10s-4.5 10-10 10H25z"/>
-        </svg>
-      </div>
+    <section className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="7" cy="7" r="7"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-32 h-32 bg-cyan-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-blue-600/30 rounded-full blur-lg animate-bounce"></div>
 
-      {/* Animated Background Overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-slate-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-200"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse-slow animation-delay-400"></div>
-      </div>
+      <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-blue-600/20 rounded-full text-blue-300 text-sm font-medium mb-6 border border-blue-500/30"
+            >
+              <Zap className="w-4 h-4 mr-2" />
+              Next-Generation Cloud Infrastructure
+            </motion.div>
 
-      <div className="relative container mx-auto px-4 py-20 lg:py-32">
-        <div className="text-center max-w-4xl mx-auto">
-          <motion.div variants={itemVariants} className="mb-6">
-            <span className="inline-flex items-center px-4 py-2 bg-blue-600/30 rounded-full text-blue-200 text-sm font-medium backdrop-blur-sm border border-blue-400/20">
-              <Cloud className="w-4 h-4 mr-2" />
-              Next-Generation Cloud Solutions
-            </span>
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            >
+              Enterprise
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Cloud Solutions
+              </span>
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed"
+            >
+              Secure VPN connections, powerful virtual computing, crystal-clear VoIP, 
+              and reliable server hosting. Your complete cloud infrastructure partner.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <Button 
+                onClick={scrollToContact}
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              
+              <Button 
+                onClick={scrollToServices}
+                variant="outline" 
+                size="lg"
+                className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white px-8 py-4 rounded-xl transition-all duration-300"
+              >
+                <Play className="mr-2 w-5 h-5" />
+                View Services
+              </Button>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700"
+            >
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-white">99.9%</div>
+                <div className="text-slate-400 text-sm">Uptime SLA</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-white">50K+</div>
+                <div className="text-slate-400 text-sm">Active Users</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-white">24/7</div>
+                <div className="text-slate-400 text-sm">Support</div>
+              </div>
+            </motion.div>
           </motion.div>
 
-          <motion.h1 
-            variants={itemVariants}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-          >
-            Power Your Business with
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-              Advanced Cloud Technology
-            </span>
-          </motion.h1>
-
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed"
-          >
-            Enterprise-grade VPN, Virtual Computing, VoIP, and Server Hosting solutions 
-            designed for modern businesses seeking reliability, security, and scalability.
-          </motion.p>
-
+          {/* Visual Elements */}
           <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
           >
-            <Button 
-              onClick={scrollToServices}
-              size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg group border border-blue-500"
-            >
-              Explore Solutions
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button 
-              onClick={scrollToContact}
-              variant="outline" 
-              size="lg"
-              className="border-slate-400 text-slate-200 hover:bg-slate-700 hover:text-white font-semibold px-8 py-4 text-lg"
-            >
-              Get Started Today
-            </Button>
-          </motion.div>
+            <div className="relative w-full h-96 lg:h-[500px]">
+              {/* Central Cloud Icon */}
+              <motion.div 
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-3xl flex items-center justify-center shadow-2xl"
+              >
+                <Globe className="w-16 h-16 text-white" />
+              </motion.div>
 
-          {/* Feature highlights */}
-          <motion.div 
-            variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto"
-          >
-            <div className="flex items-center justify-center space-x-3 text-slate-300">
-              <Shield className="w-6 h-6 text-green-400" />
-              <span className="font-medium">99.9% Uptime SLA</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3 text-slate-300">
-              <Zap className="w-6 h-6 text-yellow-400" />
-              <span className="font-medium">Lightning Fast Performance</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3 text-slate-300">
-              <Cloud className="w-6 h-6 text-blue-400" />
-              <span className="font-medium">Global Infrastructure</span>
+              {/* Orbiting Elements */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-blue-500/30 rounded-full"
+              >
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+              </motion.div>
+
+              <motion.div 
+                animate={{ rotate: -360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full"
+              >
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+              </motion.div>
+
+              {/* Background Glow */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
             </div>
           </motion.div>
         </div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 

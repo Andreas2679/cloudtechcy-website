@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
               <Cloud className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">CloudTech Solutions</span>
+            <span className="text-xl font-bold text-white">CloudTechCy</span>
           </div>
 
           {/* Desktop Navigation */}
