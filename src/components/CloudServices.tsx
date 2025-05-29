@@ -1,5 +1,5 @@
 
-import { Shield, Monitor, Phone, Server } from "lucide-react";
+import { Shield, Monitor, Phone, Server, HardDrive } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CloudServices = () => {
@@ -21,6 +21,12 @@ const CloudServices = () => {
       title: "VoIP Services",
       description: "Crystal-clear voice communication with advanced features for modern business communication needs.",
       features: ["HD Voice Quality", "Conference Calling", "Mobile Integration", "Call Analytics"]
+    },
+    {
+      icon: HardDrive,
+      title: "Cloud Storage",
+      description: "Secure, scalable cloud storage solutions with automatic backup, sync, and enterprise-grade data protection.",
+      features: ["Unlimited Storage", "Real-time Sync", "Data Encryption", "Version Control"]
     },
     {
       icon: Server,
@@ -53,7 +59,7 @@ const CloudServices = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
