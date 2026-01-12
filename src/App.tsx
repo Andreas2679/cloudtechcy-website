@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,6 +18,10 @@ import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
+import VPNService from "./pages/services/VPNService";
+import VirtualComputingService from "./pages/services/VirtualComputingService";
+import VoIPService from "./pages/services/VoIPService";
+import CloudStorageService from "./pages/services/CloudStorageService";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -31,6 +34,10 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/services/vpn" element={<VPNService />} />
+            <Route path="/services/virtual-computing" element={<VirtualComputingService />} />
+            <Route path="/services/voip" element={<VoIPService />} />
+            <Route path="/services/cloud-storage" element={<CloudStorageService />} />
             <Route path="/projects/firecat" element={<FireCatProject />} />
             <Route path="/projects/sport-retail" element={<SportRetailProject />} />
             <Route path="/projects/workwear" element={<WorkwearProject />} />

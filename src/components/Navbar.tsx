@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Cloud } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -52,7 +51,7 @@ const Navbar = () => {
               </button>
             ))}
             <Button onClick={scrollToContact} className="bg-blue-600 hover:bg-blue-700">
-              Get Started
+              Get Quote
             </Button>
           </div>
 
@@ -81,7 +80,7 @@ const Navbar = () => {
                 </button>
               ))}
               <Button onClick={scrollToContact} className="w-full bg-blue-600 hover:bg-blue-700">
-                Get Started
+                Get Quote
               </Button>
             </div>
           </div>
