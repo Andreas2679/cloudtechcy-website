@@ -91,8 +91,7 @@ const CloudServices = () => {
               </ul>
 
               <Button 
-                variant="outline"
-                className="w-full mt-auto border-white/80 text-white font-semibold hover:bg-blue-600 hover:border-blue-600 hover:text-white"
+                className="w-full mt-auto bg-blue-600 text-white font-semibold hover:bg-blue-700"
                 onClick={() => navigate(service.href)}
               >
                 Learn More
