@@ -94,9 +94,8 @@ const CloudHero = () => {
               
               <Button 
                 onClick={scrollToServices}
-                variant="outline" 
                 size="lg"
-                className="border-white/80 text-white font-semibold hover:bg-white hover:text-slate-900 px-10 py-6 rounded-xl transition-all duration-300 text-lg"
+                className="bg-white text-slate-900 font-semibold hover:bg-slate-100 px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
               >
                 <Play className="mr-2 w-6 h-6" />
                 View Services
