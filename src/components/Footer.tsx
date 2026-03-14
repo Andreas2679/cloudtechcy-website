@@ -40,17 +40,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">System Status</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">24/7 Support</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Knowledge Base</a></li>
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>
