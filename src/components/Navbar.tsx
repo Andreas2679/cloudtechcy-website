@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Menu, X, Cloud } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +33,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              <Cloud className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">CloudTechCy</span>
-          </div>
+          <a href="/" className="flex items-center space-x-2">
+            <img src={logo} alt="CloudTechCy" className="h-10 w-auto" />
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

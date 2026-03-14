@@ -1,4 +1,5 @@
-import { Cloud, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   return (
@@ -7,12 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
-                <Cloud className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">CloudTechCy</span>
-            </div>
+            <a href="/" className="flex items-center space-x-2">
+              <img src={logo} alt="CloudTechCy" className="h-10 w-auto" />
+            </a>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of enterprise cloud solutions, delivering reliable VPN, 
               virtual computing, VoIP, and hosting services.
@@ -34,13 +32,14 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">API Reference</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">System Status</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">24/7 Support</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Knowledge Base</a></li>
+              <li><a href="/#services" className="hover:text-blue-400 transition-colors">Our Services</a></li>
+              <li><a href="/#features" className="hover:text-blue-400 transition-colors">Features</a></li>
+              <li><a href="/#pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li>
+              <li><a href="/#contact" className="hover:text-blue-400 transition-colors">24/7 Support</a></li>
+              <li><a href="/#contact" className="hover:text-blue-400 transition-colors">Contact Us</a></li>
             </ul>
           </div>
+
 
           {/* Contact */}
           <div>
