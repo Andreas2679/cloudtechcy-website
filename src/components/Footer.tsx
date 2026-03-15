@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <a href="/" className="flex items-center space-x-2">
-              <img src={logo} alt="CloudTechCy" className="h-10 w-auto" />
-            </a>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={logo} alt="CloudTechCy" className="h-14 w-auto" />
+            </Link>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of enterprise cloud solutions, delivering reliable VPN, 
               virtual computing, VoIP, and hosting services.
@@ -21,10 +22,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/services/vpn" className="hover:text-blue-400 transition-colors">Enterprise VPN</a></li>
-              <li><a href="/services/virtual-computing" className="hover:text-blue-400 transition-colors">Virtual Computing</a></li>
-              <li><a href="/services/voip" className="hover:text-blue-400 transition-colors">VoIP Solutions</a></li>
-              <li><a href="/services/cloud-storage" className="hover:text-blue-400 transition-colors">Cloud Storage</a></li>
+              <li><Link to="/services/vpn" className="hover:text-blue-400 transition-colors">Enterprise VPN</Link></li>
+              <li><Link to="/services/virtual-computing" className="hover:text-blue-400 transition-colors">Virtual Computing</Link></li>
+              <li><Link to="/services/voip" className="hover:text-blue-400 transition-colors">VoIP Solutions</Link></li>
+              <li><Link to="/services/cloud-storage" className="hover:text-blue-400 transition-colors">Cloud Storage</Link></li>
             </ul>
           </div>
 
