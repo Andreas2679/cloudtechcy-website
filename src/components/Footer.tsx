@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logo} alt="CloudTechCy" className="h-16 w-auto" />
+              <img src={logo} alt="CloudTechCy" className="h-20 w-auto" />
             </Link>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of enterprise cloud solutions, delivering reliable VPN, 
