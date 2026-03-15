@@ -70,7 +70,7 @@
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- Zoho SalesIQ Chat Widget -->
-    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){$zoho.salesiq.floatwindow.visible("show");$zoho.salesiq.floatbutton.position("bottomright")}}</script>
     <script id="zsiqscript" src="https://salesiq.zoho.com/widget?wc=siq23def77a90cd729679c05bcd14b64175da6a23145ede6f2d83673f35255ced47" defer></script>
   </body>
 </html>
