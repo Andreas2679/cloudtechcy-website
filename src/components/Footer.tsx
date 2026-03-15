@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <a href="/" className="flex items-center space-x-2">
-              <img src={logo} alt="CloudTechCy" className="h-10 w-auto" />
-            </a>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={logo} alt="CloudTechCy" className="h-14 w-auto" />
+            </Link>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of enterprise cloud solutions, delivering reliable VPN, 
               virtual computing, VoIP, and hosting services.
