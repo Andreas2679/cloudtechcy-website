@@ -22,10 +22,10 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/services/vpn" className="hover:text-blue-400 transition-colors">Enterprise VPN</a></li>
-              <li><a href="/services/virtual-computing" className="hover:text-blue-400 transition-colors">Virtual Computing</a></li>
-              <li><a href="/services/voip" className="hover:text-blue-400 transition-colors">VoIP Solutions</a></li>
-              <li><a href="/services/cloud-storage" className="hover:text-blue-400 transition-colors">Cloud Storage</a></li>
+              <li><Link to="/services/vpn" className="hover:text-blue-400 transition-colors">Enterprise VPN</Link></li>
+              <li><Link to="/services/virtual-computing" className="hover:text-blue-400 transition-colors">Virtual Computing</Link></li>
+              <li><Link to="/services/voip" className="hover:text-blue-400 transition-colors">VoIP Solutions</Link></li>
+              <li><Link to="/services/cloud-storage" className="hover:text-blue-400 transition-colors">Cloud Storage</Link></li>
             </ul>
           </div>
 
