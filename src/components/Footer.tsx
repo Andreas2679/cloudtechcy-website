@@ -14,7 +14,7 @@ const Footer = () => {
             </Link>
             <p className="text-gray-400 leading-relaxed">
               Leading provider of enterprise cloud solutions, delivering reliable VPN, 
-              virtual computing, VoIP, and hosting services.
+              virtual computing, website services, and hosting.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/services/vpn" className="hover:text-blue-400 transition-colors">Enterprise VPN</Link></li>
               <li><Link to="/services/virtual-computing" className="hover:text-blue-400 transition-colors">Virtual Computing</Link></li>
-              <li><Link to="/services/voip" className="hover:text-blue-400 transition-colors">VoIP Solutions</Link></li>
+              <li><Link to="/services/website-build-hosting" className="hover:text-blue-400 transition-colors">Website Build & Hosting</Link></li>
               <li><Link to="/services/cloud-storage" className="hover:text-blue-400 transition-colors">Cloud Storage</Link></li>
             </ul>
           </div>

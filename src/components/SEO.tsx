@@ -19,7 +19,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = 'CloudTechCy - Professional Cloud Services',
-  description = 'Leading provider of cloud solutions including VPN, Virtual Computing, VoIP, server hosting, and enterprise cloud infrastructure.',
+  description = 'Leading provider of cloud solutions including VPN, Virtual Computing, Website Build & Hosting, server hosting, and enterprise cloud infrastructure.',
   type = 'website',
   name = 'CloudTechCy',
   imageUrl = '/lovable-uploads/48ecf6e2-5a98-4a9d-af6f-ae2265cd4098.png',
@@ -27,7 +27,7 @@ const SEO: React.FC<SEOProps> = ({
   modifiedDate,
   author,
   category,
-  keywords = ['cloud solutions', 'VPN services', 'virtual computing', 'VoIP', 'server hosting', 'cloud infrastructure', 'enterprise cloud'],
+  keywords = ['cloud solutions', 'VPN services', 'virtual computing', 'website build', 'web hosting', 'server hosting', 'cloud infrastructure', 'enterprise cloud'],
   isBlogPost = false
 }) => {
   const location = useLocation();
