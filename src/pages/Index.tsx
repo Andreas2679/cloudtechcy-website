@@ -13,8 +13,8 @@ const Index = () => {
     <PageLayout>
       <SEO 
         title="CloudTech Solutions - Professional Cloud Services" 
-        description="Leading provider of cloud solutions including VPN, Virtual Computing, VoIP, server hosting, and enterprise cloud infrastructure."
-        keywords={['cloud solutions', 'VPN services', 'virtual computing', 'VoIP', 'server hosting', 'cloud infrastructure', 'enterprise cloud']}
+        description="Leading provider of cloud solutions including VPN, Virtual Computing, Website Build & Hosting, server hosting, and enterprise cloud infrastructure."
+        keywords={['cloud solutions', 'VPN services', 'virtual computing', 'website build', 'web hosting', 'server hosting', 'cloud infrastructure', 'enterprise cloud']}
       />
       <CloudHero />
       <div id="services">

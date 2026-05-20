@@ -19,7 +19,7 @@ const CloudTestimonials = () => {
     {
       name: "Emily Rodriguez",
       role: "Operations Manager, InnovateNow",
-      content: "VoIP service quality is outstanding. Crystal clear calls and the conference features have improved our team collaboration significantly.",
+      content: "Our new website and hosting package is fantastic. The site loads instantly, and their support team helped us through every step of the build.",
       rating: 5
     }
   ];

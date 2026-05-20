@@ -27,7 +27,7 @@ const CloudPricing = () => {
       features: [
         "VPN (25 connections)",
         "5 Virtual Machines",
-        "VoIP (10 users)",
+        "Website Build & Hosting",
         "5TB Cloud Storage",
         "Priority Support",
         "99.9% Uptime SLA"
@@ -42,7 +42,7 @@ const CloudPricing = () => {
       features: [
         "VPN (On Router and 150+ connections)",
         "25 Virtual Machines",
-        "VoIP (50 users)",
+        "Website Build & Hosting",
         "10TB Cloud Storage",
         "24/7 Support",
         "99.99% Uptime SLA",

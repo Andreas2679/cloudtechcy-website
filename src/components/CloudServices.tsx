@@ -1,4 +1,4 @@
-import { Shield, Monitor, Phone, HardDrive } from "lucide-react";
+import { Shield, Monitor, Globe, HardDrive } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -22,11 +22,11 @@ const CloudServices = () => {
       href: "/services/virtual-computing"
     },
     {
-      icon: Phone,
-      title: "VoIP Solutions",
-      description: "Crystal-clear voice communication with advanced features for modern business communication needs.",
-      features: ["HD Voice Quality", "Conference Calling", "Mobile Integration", "Call Analytics"],
-      href: "/services/voip"
+      icon: Globe,
+      title: "Website Build & Hosting",
+      description: "Professional website development and reliable hosting with SSL, backups, and 24/7 monitoring included.",
+      features: ["Custom Development", "Fast Hosting", "SSL & Security", "24/7 Monitoring"],
+      href: "/services/website-build-hosting"
     },
     {
       icon: HardDrive,

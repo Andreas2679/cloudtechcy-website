@@ -20,7 +20,7 @@ import Blog from "./pages/Blog";
 import BlogPostDetail from "./pages/BlogPostDetail";
 import VPNService from "./pages/services/VPNService";
 import VirtualComputingService from "./pages/services/VirtualComputingService";
-import VoIPService from "./pages/services/VoIPService";
+import WebsiteBuildHostingService from "./pages/services/WebsiteBuildHostingService";
 import CloudStorageService from "./pages/services/CloudStorageService";
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/services/vpn" element={<VPNService />} />
             <Route path="/services/virtual-computing" element={<VirtualComputingService />} />
-            <Route path="/services/voip" element={<VoIPService />} />
+            <Route path="/services/website-build-hosting" element={<WebsiteBuildHostingService />} />
             <Route path="/services/cloud-storage" element={<CloudStorageService />} />
             <Route path="/projects/firecat" element={<FireCatProject />} />
             <Route path="/projects/sport-retail" element={<SportRetailProject />} />

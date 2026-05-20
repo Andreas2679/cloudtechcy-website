@@ -73,7 +73,7 @@ const CloudHero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-2xl text-slate-300 mb-12 max-w-2xl leading-relaxed"
             >
-              Secure VPN connections, powerful virtual computing, crystal-clear VoIP, 
+              Secure VPN connections, powerful virtual computing, professional website build & hosting,
               and reliable server hosting. Your complete cloud infrastructure partner.
             </motion.p>
 
