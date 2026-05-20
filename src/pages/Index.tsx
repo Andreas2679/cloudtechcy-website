@@ -29,6 +29,7 @@ const Index = () => {
       <div id="pricing">
         <CloudPricing />
       </div>
+      <ContactForm />
     </PageLayout>
   );
 };
