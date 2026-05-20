@@ -6,6 +6,7 @@ import CloudFeatures from '@/components/CloudFeatures';
 import CloudStats from '@/components/CloudStats';
 import CloudTestimonials from '@/components/CloudTestimonials';
 import CloudPricing from '@/components/CloudPricing';
+import ContactForm from '@/components/ContactForm';
 import SEO from '@/components/SEO';
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
       <div id="pricing">
         <CloudPricing />
       </div>
+      <ContactForm />
     </PageLayout>
   );
 };
