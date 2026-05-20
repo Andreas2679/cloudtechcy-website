@@ -21,6 +21,7 @@ import BlogPostDetail from "./pages/BlogPostDetail";
 import VPNService from "./pages/services/VPNService";
 import VirtualComputingService from "./pages/services/VirtualComputingService";
 import WebsiteBuildHostingService from "./pages/services/WebsiteBuildHostingService";
+import CloudStorageService from "./pages/services/CloudStorageService";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
